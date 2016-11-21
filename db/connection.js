@@ -11,12 +11,12 @@ db.once('open', () => {
 
 
 var TopicSchema =  mongoose.Schema({
-  Name: String,
-  Question: String,
+  name: String,
+  question: String,
 })
 
 var QuestionSchema = mongoose.Schema({
-  Question: String,
+  question: String,
   topics: [TopicSchema]
 })
 
