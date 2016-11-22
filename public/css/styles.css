@@ -7,5 +7,10 @@ p {
 }
 
 body{
-  background-color: blue;
+  /*background-color: blue;*/
+  /*background-image: url(http://blogs-images.forbes.com/blakemorgan/files/2015/05/Screen-Shot-2015-05-10-at-8.19.06-PM.jpg?width=960);*/
+  /*background-image: url(http://3plusinternational.com/wp-content/uploads/Introvert.jpg);
+  background-image: url(http://img.sxsw.com/2016/spg_images/PP56015.png);*/
+  background-image: url(http://d1xenuxjgcz4dx.cloudfront.net/wp-content/uploads/2015/11/Why_Introverts_and_Extroverts_Are_Different_The_Science_SOURCE_pixabay.jpg);
+  background-size: 800px 600px;
 }
