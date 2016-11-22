@@ -14,3 +14,22 @@ body{
   background-image: url(http://d1xenuxjgcz4dx.cloudfront.net/wp-content/uploads/2015/11/Why_Introverts_and_Extroverts_Are_Different_The_Science_SOURCE_pixabay.jpg);
   background-size: 800px 600px;
 }
+
+a:link {
+    color: white;
+    /*font-family: 'Merriweather', serif;*/
+    font-weight: bold;
+
+}
+a:visited {
+    color: rgb(51, 41, 41);
+    /*font-family: 'Merriweather', serif;*/
+    font-weight: bold;
+}
+a:hover {
+    color: rgb(242, 197, 179);
+}
+
+a:active {
+    color: white;
+  }
