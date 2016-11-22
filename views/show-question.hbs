@@ -1,0 +1,16 @@
+
+<div class="questions">
+  {{#each questions}}
+  <li>
+    <ul>
+  <a href='/questions/'>{{this.question}}</a>
+  </ul>
+  </li>
+  {{/each}}
+</div>
+
+<form action='/questions' method='post'>
+  <input type='text' name='topic[name]' placeholder="topic" />
+  <input type='text' name='topic[question]' placeholder="question" />
+  <button type='submit'>Create a New Question</button>
+</form>

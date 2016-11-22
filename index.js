@@ -12,28 +12,34 @@ var Topic = mongoose.model('Topic')
 app.set("view engine", "hbs")
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
-// app.use(express.static(__dirname + '/public'))
+//
+// app.use(express.static("public"))
+app.use(express.static(__dirname + '/public'))
 
 
 app.get('/', (req, res) => {
   res.render("index")
 })
 
-app.get('/', (req, res) =>{
-  Question.find({}).then((question) => {
-    res.render('index', {question})
+app.get('/questions', (req, res) =>{
+  Question.find({}).then((questions) => {
+    res.render('show-question', {questions})
   })
 })
 
-app.get('/', (req, res) => {
-  Topic.find({}).then((topic) => {
-    res.render('index', {topic})
+app.get('/topics', (req, res) => {
+  Topic.find({}).then((topics) => {
+    res.render('show-topic', {topics})
   })
 })
 
-// app.get('/:question', (req,res) => {
-//   res.send(req.params.question)
-// })
+app.post('/questions', (req, res) => {
+  // res.json(req.body)
+  Topic.create(req.body.topic).then(topic => {
+  res.redirect("/")
+  console.log(req.body.topic)
+})
+})
 
 app.listen(4000, () => {
   console.log("app listening on port 4000");
