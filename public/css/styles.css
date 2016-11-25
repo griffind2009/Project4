@@ -1,9 +1,18 @@
 h1 {
   color: white;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 60px;
+  background: rgb(235, 131, 51);
 }
 
 p {
   color: white;
+  font-size: 20px;
+}
+
+.intro{
+  text-align: center;
+  background: rgb(129, 50, 50);
 }
 
 body{
@@ -33,3 +42,16 @@ a:hover {
 a:active {
     color: white;
   }
+
+  h1 {
+    text-align: center;
+  }
+
+  .questions{
+    color: white;
+  }
+
+  /*font-family: 'Delius Unicase', cursive;
+font-family: 'Inconsolata', monospace;
+font-family: 'Poppins', sans-serif;
+font-family: 'Abril Fatface', cursive;*/
