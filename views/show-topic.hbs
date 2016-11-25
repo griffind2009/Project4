@@ -7,7 +7,11 @@
 
 <div class="topics">
   {{#each topics}}
-  <p>{{this.name}}</p>
-  <p>{{this.question}}</p>
-  {{/each}}
+    <div class="name">
+      <p>{{this.name}}</p>
+    </div>
+    <div class="tquestion">
+      <p>{{this.question}}</p>
+      {{/each}}
+    </div>
 </div>
