@@ -46,6 +46,10 @@ app.post('/api/topics', (req, res) => {
 res.json(topic)
 })
 
+app.get("/*", function(req, res){
+  res.render("index", {index: false});
+});
+
 app.listen(4000, () => {
   console.log("app listening on port 4000");
 });

@@ -1,4 +1,3 @@
-console.log("working")
 angular
   .module("small", [
     "ui.router",
@@ -23,17 +22,17 @@ angular
     questionController
   ])
 
-// function questionIndexController (QuestionFactory) {
-//   // this.questions = Question.query()
-// }
+function questionIndexController (QuestionFactory) {
+  // this.questions = Question.query()
+}
 
 function Router ($stateProvider) {
   $stateProvider
     .state("index", {
       url: "/",
       templateUrl: "/public/js/ng-views/index.html"
-      // controller: "questionIndex",
-      // controllerAs: "vm"
+      controller: "questionIndex",
+      controllerAs: "vm"
     })
     .state("questions", {
       url: '/questions',
@@ -51,5 +50,6 @@ function QuestionFactoryFunction($resource){
 
 function questionController ($stateParams, QuestionFactory) {
   this.questions = Question.query()
+  this.questions = Question.get({question: $stateParams.question})
   console.log(this.questions)
 }
