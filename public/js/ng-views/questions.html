@@ -1,4 +1,8 @@
 <br>
-<p><a data-ui-sref='/'>Home</p></a>
+<p><a data-ui-sref='index'>Home</p></a>
 
-  <p>{{vm.questions}}</p>
+<div class="questions">
+<p data-ng-repeat="question in vm.questions">
+  {{question.question}}
+</p>
+</div>

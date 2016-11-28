@@ -22,9 +22,6 @@ angular
     questionController
   ])
 
-function questionIndexController (QuestionFactory) {
-  this.questions = QuestionFactory.query()
-}
 
 function Router ($stateProvider) {
   $stateProvider
@@ -42,14 +39,17 @@ function Router ($stateProvider) {
     })
 }
 
-function QuestionFactoryFunction($resource){
-  return $resource("/api/questions", {}, {
-    update: {method: "PUT"}
-  })
+function questionIndexController (QuestionFactory) {
+  this.questions = QuestionFactory.query()
 }
 
 function questionController ($stateParams, QuestionFactory) {
   this.questions = QuestionFactory.query()
   // this.question = QuestionFactory.get({question: $stateParams.question})
   console.log(this.questions)
+}
+function QuestionFactoryFunction($resource){
+  return $resource("/api/questions", {}, {
+    update: {method: "PUT"}
+  })
 }
