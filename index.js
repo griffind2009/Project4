@@ -9,7 +9,7 @@ var bodyParser = require('body-parser')
 var Question = mongoose.model('Question')
 var Topic = mongoose.model('Topic')
 
-var mykey = config.MY_KEY;
+// var mykey = config.MY_KEY;
 
 app.set("view engine", "hbs")
 app.use(bodyParser.json())
