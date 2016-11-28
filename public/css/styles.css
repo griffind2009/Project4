@@ -20,6 +20,8 @@ h1 {
     background-color: rgba(236, 163, 109, .6);
     margin: 10px;
     padding: 5px;
+    color: rgb(51, 41, 41);
+    /*color: white;*/
 }
 
 p {

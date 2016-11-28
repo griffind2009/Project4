@@ -11,15 +11,24 @@ angular
     "$resource",
     QuestionFactoryFunction
   ])
+  .factory('TopicFactory', [
+    '$resource',
+    TopicFactoryFunction
+  ])
   .controller(
     "questionIndex",
-    ["QuestionFactory",
+    ["QuestionFactory", "TopicFactory",
     questionIndexController]
   )
   .controller("questionCtrl", [
     "$stateParams",
     "QuestionFactory",
     questionController
+  ])
+  .controller('topicCtrl', [
+    '$stateParams',
+    'TopicFactory',
+      topicController
   ])
 
 
@@ -37,10 +46,17 @@ function Router ($stateProvider) {
       controller: 'questionCtrl',
       controllerAs: 'vm'
     })
+    .state("topics", {
+      url: '/topics',
+      templateUrl: '/js/ng-views/topics.html',
+      controller: 'topicCtrl',
+      controllerAs: 'vm'
+  })
 }
 
-function questionIndexController (QuestionFactory) {
+function questionIndexController (QuestionFactory, TopicFactory) {
   this.questions = QuestionFactory.query()
+  this.topics = TopicFactory.query()
 }
 
 function questionController ($stateParams, QuestionFactory) {
@@ -48,8 +64,19 @@ function questionController ($stateParams, QuestionFactory) {
   // this.question = QuestionFactory.get({question: $stateParams.question})
   console.log(this.questions)
 }
+
+function topicController ($stateParams, TopicFactory) {
+    this.topics = TopicFactory.query()
+}
+
 function QuestionFactoryFunction($resource){
   return $resource("/api/questions", {}, {
+    update: {method: "PUT"}
+  })
+}
+
+function TopicFactoryFunction($resource){
+  return $resource("/api/topics", {}, {
     update: {method: "PUT"}
   })
 }
