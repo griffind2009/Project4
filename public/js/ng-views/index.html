@@ -9,7 +9,11 @@
 <div class="questions">
   <p data-ng-repeat="question in vm.questions">
     <p><a data-ui-sref='questions'>Start a Coversation</a></p>
-    <p><a data-ui-sref='topics'>Need a Specific Topic</p></a>
-    <p><a data-ui-sref='topics'>Pro? Add your own question</p></a>
 </p>
+
+  <p data-ng-repeat='topic in vm.topics'>
+<p><a data-ui-sref='topics'>Need a Specific Topic</p></a>
+<p><a data-ui-sref='topics'>Pro? Add your own question</p></a>
+</p>
+
 </div>

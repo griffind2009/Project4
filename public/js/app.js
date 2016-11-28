@@ -23,7 +23,7 @@ angular
   ])
 
 function questionIndexController (QuestionFactory) {
-  // this.questions = Question.query()
+  this.questions = QuestionFactory.query()
 }
 
 function Router ($stateProvider) {
@@ -49,7 +49,7 @@ function QuestionFactoryFunction($resource){
 }
 
 function questionController ($stateParams, QuestionFactory) {
-  this.questions = Question.query()
-  this.questions = Question.get({question: $stateParams.question})
+  this.questions = QuestionFactory.query()
+  // this.question = QuestionFactory.get({question: $stateParams.question})
   console.log(this.questions)
 }
