@@ -18,7 +18,7 @@ function questionIndexController () {
 function Router ($stateProvider) {
   $stateProvider
     .state("index", {
-      url: "/index",
+      url: "/",
       templateUrl: "/public/js/ng-views/index.html",
       controller: "questionIndex",
       controllerAs: "vm"
