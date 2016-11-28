@@ -30,13 +30,13 @@ function Router ($stateProvider) {
   $stateProvider
     .state("index", {
       url: "/",
-      templateUrl: "/public/js/ng-views/index.html"
+      templateUrl: "/js/ng-views/index.html",
       controller: "questionIndex",
       controllerAs: "vm"
     })
     .state("questions", {
       url: '/questions',
-      templateUrl: '/public/js/ng-views/questions.html',
+      templateUrl: '/js/ng-views/questions.html',
       controller: 'questionCtrl',
       controllerAs: 'vm'
     })
