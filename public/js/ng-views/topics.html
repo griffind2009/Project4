@@ -7,6 +7,22 @@
   <button type='submit'>Create a New Question</button>
 </form>
 
+<br>
+<div class="searchBox">
+    <div class="find">
+      <div class="search">
+        <form id="search">
+          <input type="search" placeholder="Search by Topic" id="topic-search" ng-model= "search">
+          <select ng-options="(topic.name) for topic in vm.topics | filter: search " id="topic-select" ng-model="vm.currentTopic">
+          </select>
+        </form>
+      </div>
+      <div class="search">
+        <button data-ui-sref="topics({id: vm.currentTopic.name})" class="button">Search</button>
+      </div>
+      </div>
+    </div>
+
 <div class="topics">
 <p data-ng-repeat="topic in vm.topics">
   {{topic.name}}

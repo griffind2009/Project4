@@ -61,9 +61,8 @@ function questionIndexController (QuestionFactory, TopicFactory) {
   this.topics = TopicFactory.query()
 }
 
-function questionController ($stateParams, QuestionFactory) {
+function questionController ($state, $stateParams, QuestionFactory) {
   this.questions = QuestionFactory.query()
-  // this.question = QuestionFactory.get({question: $stateParams.question})
   console.log(this.questions)
 }
 
