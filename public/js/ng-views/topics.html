@@ -1,6 +1,12 @@
 <br>
 <p><a data-ui-sref='index'>Home</p></a>
 
+<form ng-submit="vm.create()">
+  <input type='text' ng-model="vm.newTopic.name" placeholder="topic" />
+  <input type='text' ng-model="vm.newTopic.question" placeholder="question" />
+  <button type='submit'>Create a New Question</button>
+</form>
+
 <div class="topics">
 <p data-ng-repeat="topic in vm.topics">
   {{topic.name}}

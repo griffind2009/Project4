@@ -38,7 +38,7 @@ app.get('/api/topics', (req, res) => {
 
 app.post('/api/topics', (req, res) => {
   // res.json(req.body)
-  Topic.create(req.body.topic).then((topic) => {
+  Topic.create(req.body).then((topic) => {
     // res.redirect("/topics")
     // console.log(req.body.topic)
     res.json(topic)

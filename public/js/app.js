@@ -21,11 +21,13 @@ angular
     questionIndexController]
   )
   .controller("questionCtrl", [
+    "$state",
     "$stateParams",
     "QuestionFactory",
     questionController
   ])
   .controller('topicCtrl', [
+    '$state',
     '$stateParams',
     'TopicFactory',
       topicController
@@ -65,8 +67,14 @@ function questionController ($stateParams, QuestionFactory) {
   console.log(this.questions)
 }
 
-function topicController ($stateParams, TopicFactory) {
+function topicController ($state, $stateParams, TopicFactory) {
     this.topics = TopicFactory.query()
+    this.newTopic = new TopicFactory()
+    this.create = function () {
+      this.newTopic.$save().then(function(topic){
+        $state.go('topics', {name: topic.name}, {reload: true})
+      })
+    }
 }
 
 function QuestionFactoryFunction($resource){
