@@ -2,7 +2,8 @@ h1 {
   color: white;
   font-family: 'Abril Fatface', cursive;
   font-size: 60px;
-  background: rgb(235, 131, 51);
+  /*background: rgb(235, 131, 51);*/
+  background: #E08E45;
 }
 
 .name{
@@ -12,19 +13,24 @@ h1 {
 }
 
 .tquestions{
-  background-color: rgba(236, 163, 109, .5);
-  font-size: 18px;
+  /*background-color: rgba(236, 163, 109, .5);*/
+  background-color: #C59674;
+  font-size: 16px;
   padding: 5px;
   margin: 5px;
+  /*color: #00798C;*/
+  color: white;
 }
 
 .topics{
-    background-color: rgba(236, 163, 109, .5);
+    /*background-color: rgba(236, 163, 109, .5);*/
+    background-color: #C59674;
     margin: 10px;
     padding: 5px;
-    color: rgb(51, 41, 41);
+    /*color: rgb(51, 41, 41);*/
     text-align: center;
-    /*color: white;*/
+    /*color: #00798C;*/
+    color: white;
 }
 
 p {
@@ -41,11 +47,12 @@ p {
 }
 
 body{
-  background-color: rgb(132, 50, 50);
+  /*background-color: rgb(132, 50, 50);*/
   /*background-image: url(http://blogs-images.forbes.com/blakemorgan/files/2015/05/Screen-Shot-2015-05-10-at-8.19.06-PM.jpg?width=960);*/
   /*background-image: url(http://img.sxsw.com/2016/spg_images/PP56015.png);*/
   /*background-image: url(http://d1xenuxjgcz4dx.cloudfront.net/wp-content/uploads/2015/11/Why_Introverts_and_Extroverts_Are_Different_The_Science_SOURCE_pixabay.jpg);*/
   /*background-size: 800px 600px;*/
+  background-color: #823038;
 }
 
 a:link {
