@@ -74,6 +74,9 @@ function topicController ($state, $stateParams, TopicFactory) {
         $state.go('topics', {name: topic.name}, {reload: true})
       })
     }
+    this.showTopic = function() {
+      console.log("clicked")
+    }
 }
 
 function QuestionFactoryFunction($resource){
