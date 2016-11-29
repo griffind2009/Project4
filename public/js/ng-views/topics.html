@@ -19,15 +19,15 @@
       </div>
       <div class="search">
         <button data-ui-sref="topics({name: vm.currentTopic.name})" ng-click="vm.showTopic()"class="button">Search</button>
-          <p ng-show="vm.showTopic">{{vm.currentTopic.name}}</p>
-          <p ng-show="vm.showTopic">{{vm.currentTopic.question}}</p>
+          <p ng-show="vm.showTopic">Topic: {{vm.currentTopic.name}}</p>
+          <p ng-show="vm.showTopic">Question: {{vm.currentTopic.question}}</p>
       </div>
       </div>
     </div>
 
 <div class="topics">
 <p data-ng-repeat="topic in vm.topics">
-  {{topic.name}}
+  {{topic.name}}:
   <br>
   {{topic.question}}
   </p>
