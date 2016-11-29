@@ -75,7 +75,6 @@ function topicController ($state, $stateParams, TopicFactory) {
       })
     }
     this.showTopic = function() {
-      console.log("clicked")
     }
 }
 

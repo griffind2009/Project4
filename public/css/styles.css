@@ -11,13 +11,15 @@ h1 {
   color: rgb(51, 41, 41);
 }
 
-.tquestion{
+.tquestions{
+  background-color: rgba(236, 163, 109, .5);
   font-size: 18px;
-  color: rgb(232, 207, 190);
+  padding: 5px;
+  margin: 5px;
 }
 
 .topics{
-    background-color: rgba(236, 163, 109, .6);
+    background-color: rgba(236, 163, 109, .5);
     margin: 10px;
     padding: 5px;
     color: rgb(51, 41, 41);
@@ -31,13 +33,14 @@ p {
 
 .intro{
   text-align: center;
-  background: rgba(129, 50, 50, .9);
+  /*background: rgba(129, 50, 50, .9);*/
+  background-color: rgba(236, 163, 109, .5);
   margin: 40px;
   padding: 3px;
 }
 
 body{
-  background-color: orange;
+  background-color: rgb(132, 50, 50);
   /*background-image: url(http://blogs-images.forbes.com/blakemorgan/files/2015/05/Screen-Shot-2015-05-10-at-8.19.06-PM.jpg?width=960);*/
   /*background-image: url(http://img.sxsw.com/2016/spg_images/PP56015.png);*/
   /*background-image: url(http://d1xenuxjgcz4dx.cloudfront.net/wp-content/uploads/2015/11/Why_Introverts_and_Extroverts_Are_Different_The_Science_SOURCE_pixabay.jpg);*/
@@ -70,7 +73,7 @@ a:active {
   .questions{
     color: white;
     font-size: 20px;
-    background-color: rgba(236, 163, 109, .5);
+    /*background-color: rgba(236, 163, 109, .5);*/
     padding: 5px;
     margin: 5px;
   }
