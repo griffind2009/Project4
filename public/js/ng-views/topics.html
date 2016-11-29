@@ -1,0 +1,38 @@
+<br>
+<p><a data-ui-sref='index'>Home</p></a>
+
+<form ng-submit="vm.create()">
+  <input type='text' ng-model="vm.newTopic.name" placeholder="topic" />
+  <input type='text' ng-model="vm.newTopic.question" placeholder="question" />
+  <button type='submit'>Create a New Question</button>
+</form>
+
+<br>
+<div class="searchBox">
+    <div class="find">
+      <div class="search">
+        <form id="search">
+          <!-- <input type="search" placeholder="Search by Topic" id="topic-search" ng-model= "search"> -->
+          <select ng-options="(topic.name) for topic in vm.topics | filter: search " id="topic-select" ng-model="vm.currentTopic">
+          </select>
+        </form>
+      </div>
+      <div class="search">
+        <button data-ui-sref="topics({name: vm.currentTopic.name})" ng-click="vm.showTopic()"class="button">Search</button>
+          <p ng-show="vm.showTopic">{{vm.currentTopic.name}}</p>
+          <p ng-show="vm.showTopic">{{vm.currentTopic.question}}</p>
+      </div>
+      </div>
+    </div>
+
+<div class="topics">
+<p data-ng-repeat="topic in vm.topics">
+  {{topic.name}}
+  <br>
+  {{topic.question}}
+  </p>
+    <!-- <p class="name">
+    </p>
+    <p class="tquestion">
+  </p> -->
+</div>
