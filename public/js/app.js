@@ -5,6 +5,8 @@ angular
   ])
   .config([
     "$stateProvider",
+    "$locationProvider",
+    "$urlRouterProvider",
     Router
   ])
   .factory("QuestionFactory", [
@@ -34,7 +36,8 @@ angular
   ])
 
 
-function Router ($stateProvider) {
+function Router ($stateProvider, $locationProvider, $urlRouterProvider) {
+  $locationProvider.html5Mode(true)
   $stateProvider
     .state("index", {
       url: "/",
@@ -54,6 +57,7 @@ function Router ($stateProvider) {
       controller: 'topicCtrl',
       controllerAs: 'vm'
   })
+  $urlRouterProvider.otherwise("/")
 }
 
 function questionIndexController (QuestionFactory, TopicFactory) {
