@@ -3,7 +3,7 @@ var db = mongoose.connection
 var mongodb = require('mongodb');
 var MongoClient = mongodb.MongoClient;
 var url = 'mongodb://localhost:27017/smalltalk';
-var url = process.env.MONGOLAB_URI;
+process.env.MONGOLAB_URI;
 
 db.on('error', err => {
   console.log(err)
@@ -17,6 +17,8 @@ if (err) {
   console.log('Unable to connect to the mongoDB server. Error:', err);
 } else {
   console.log('Connection established to', url);
+}
+})
 
 
 var TopicSchema =  mongoose.Schema({
@@ -34,6 +36,6 @@ var QuestionSchema = mongoose.Schema({
 
  mongoose.Promise = global.Promise
 
- mongoose.connect('mongodb://localhost/smalltalk')
+ mongoose.connect('mongodb://localhost:27017/smalltalk')
 
 module.exports = mongoose
