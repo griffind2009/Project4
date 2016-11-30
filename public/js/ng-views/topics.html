@@ -26,7 +26,7 @@
     </div>
 
 <div class="topics">
-<p data-ng-repeat="topic in vm.topics">
+<p data-ng-repeat="topic in vm.topics | orderBy:'-name'">
   {{topic.name}}:
   <br>
   {{topic.question}}
