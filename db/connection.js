@@ -38,6 +38,6 @@ var QuestionSchema = mongoose.Schema({
 
  mongoose.Promise = global.Promise
 
- mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost:27017/smalltalk')
+ mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://https://small-talk-for-introverts.herokuapp.com/')
 
 module.exports = mongoose
