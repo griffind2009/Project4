@@ -21,24 +21,24 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.get("/*?", function(req, res){
+app.get("/*?", function(req, res, next){
   res.render("index");
 });
 
-app.get('/api/questions', (req, res) =>{
+app.get('/api/questions', (req, res, next) =>{
   Question.find({}).then((questions) => {
       res.json(questions)
   })
 
 })
 
-app.get('/api/topics', (req, res) => {
+app.get('/api/topics', (req, res, next) => {
   Topic.find({}).then((topics) => {
     res.json(topics)
   })
 })
 
-app.post('/api/topics', (req, res) => {
+app.post('/api/topics', (req, res, next) => {
   Topic.create(req.body).then((topic) => {
     res.json(topic)
   })
