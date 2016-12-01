@@ -3,6 +3,7 @@ var db = mongoose.connection
 var mongodb = require('mongodb');
 var MongoClient = mongodb.MongoClient;
 var url = 'mongodb://localhost:27017/smalltalk';
+// var url = require('url')
 
 
 
@@ -37,6 +38,6 @@ var QuestionSchema = mongoose.Schema({
 
  mongoose.Promise = global.Promise
 
- mongoose.connect('mongodb://localhost:27017/smalltalk')
+ mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost:27017/smalltalk')
 
 module.exports = mongoose
