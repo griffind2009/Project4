@@ -67,7 +67,6 @@ function questionIndexController (QuestionFactory, TopicFactory) {
 
 function questionController ($state, $stateParams, QuestionFactory) {
   this.questions = QuestionFactory.query()
-  console.log(this.questions)
 }
 
 function topicController ($state, $stateParams, TopicFactory) {
