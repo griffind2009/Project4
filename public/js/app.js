@@ -83,13 +83,13 @@ function topicController ($state, $stateParams, TopicFactory) {
 }
 
 function QuestionFactoryFunction($resource){
-  return $resource("/api/questions", {}, {
+  return $resource("https://small-talk-for-introverts.herokuapp.com/questions", {}, {
     update: {method: "PUT"}
   })
 }
 
 function TopicFactoryFunction($resource){
-  return $resource("/api/topics", {}, {
+  return $resource("https://small-talk-for-introverts.herokuapp.com/topics", {}, {
     update: {method: "PUT"}
   })
 }

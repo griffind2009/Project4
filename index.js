@@ -9,7 +9,6 @@ var bodyParser = require('body-parser')
 var Question = mongoose.model('Question')
 var Topic = mongoose.model('Topic')
 
-// var mykey = config.MY_KEY;
 
 app.set("view engine", "hbs")
 app.use(bodyParser.json({ extended: true }))
@@ -43,4 +42,4 @@ app.post('/api/topics', (req, res) => {
 app.listen(4000, () => {
   console.log("app listening on port 4000");
 });
-app.listen(process.env.PORT || 4200)
+// app.listen(process.env.PORT || 4200)
