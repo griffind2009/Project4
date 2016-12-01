@@ -12,7 +12,7 @@
     <div class="find">
       <div class="search">
         <form id="search">
-          <!-- <input type="search" placeholder="Search by Topic" id="topic-search" ng-model= "search"> -->
+      
           <select ng-options="(topic.name) for topic in vm.topics | filter: search " id="topic-select" ng-model="vm.currentTopic">
           </select>
         </form>
