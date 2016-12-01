@@ -3,7 +3,8 @@ var db = mongoose.connection
 var mongodb = require('mongodb');
 var MongoClient = mongodb.MongoClient;
 var url = 'mongodb://localhost:27017/smalltalk';
-process.env.MONGOLAB_URI;
+
+
 
 db.on('error', err => {
   console.log(err)
