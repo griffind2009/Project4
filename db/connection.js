@@ -2,7 +2,7 @@ var mongoose = require('mongoose')
 var db = mongoose.connection
 var mongodb = require('mongodb');
 var MongoClient = mongodb.MongoClient;
-var url = 'mongodb://localhost:27017/smalltalk';
+var url = 'mongodb://process.env.MONGOLAB_URI/smalltalk';
 // var url = require('url')
 
 
