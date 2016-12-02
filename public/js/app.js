@@ -62,7 +62,7 @@ function Router ($stateProvider, $locationProvider, $urlRouterProvider) {
 
 function questionIndexController (QuestionFactory, TopicFactory) {
   this.questions = QuestionFactory.query()
-  this.topics = TopicFactory.query()
+    this.topics = TopicFactory.query()
 }
 
 function questionController ($state, $stateParams, QuestionFactory) {

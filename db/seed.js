@@ -50,9 +50,3 @@ Topic.create({name: "Work", question: "What was your first job? Did you like it?
 Topic.create({name: "Food", question: "What is your favorite food"})
 Topic.create({name: "Food", question: "Do you have a favorite restaurant"})
 Topic.create({name: "Food", question: "What is your favorite meal of the day?"})
-
-
-// process.exit()
-
-// var questions = [q1, q2, q3]
-// var topics = [topic1, topic2, topic3]
