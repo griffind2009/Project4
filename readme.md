@@ -10,3 +10,5 @@ To see screen shots of the web application please follow the following path:
 img/Screen Shot 2016-11-30 at 10.14.02 AM.png
 img/Screen Shot 2016-11-30 at 10.14.11 AM.png
 img/Screen Shot 2016-11-30 at 10.14.19 AM.png
+
+Here is the link to the deployed app on heroku: https://small-talk-for-introverts.herokuapp.com/
